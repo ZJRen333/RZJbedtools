@@ -45,13 +45,13 @@ def filenamesplit(filename):
     if filename.split('.')[1]=='narrowPeak':
         indexlist=[0,1,2,3]
     return indexlist
-def main():
+def bedmain():
     dfile=readfilename.split('.')[0]+'.bed'
     indexlist=filenamesplit(readfilename)
     Instant=Xtobedlist(readfilename,indexlist)
     listwrite=Instant.fileread()
     Instant.filewrite(listwrite,dfile)
 if __name__=='__main__':
-    main()
+    bedmain()
     
     
